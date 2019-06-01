@@ -9,11 +9,13 @@ CacheStatus.o : CacheStatus.h CacheStatus.cpp
 
 main.o : main.cpp
 	g++ -c main.cpp
+HelperFunctions.o : HelperFunctions.h HelperFunctions.cpp
+	g++ -c HelperFunctions.cpp
 
 all : result
 
-result : TrackBlock.o MemoryReferenceTable.o CacheStatus.o main.o
-	g++ main.o TrackBlock.o MemoryReferenceTable.o CacheStatus.o -o res 
+result : TrackBlock.o MemoryReferenceTable.o CacheStatus.o HelperFunctions.o main.o
+	g++ main.o TrackBlock.o MemoryReferenceTable.o CacheStatus.o HelperFunctions.o -o res 
 
 clean :
 	rm -rf *o res
