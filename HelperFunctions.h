@@ -1,5 +1,9 @@
 #ifndef HELPERFUNCTIONS_H
 #define HELPERFUNCTIONS_H
+#include "MemoryReferenceTable.h"
+#include <string>
+
+using namespace std;
 
 /************** USER FUNCTIONS ******************************
 *************************************************************/
